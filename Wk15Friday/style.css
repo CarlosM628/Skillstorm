@@ -1,0 +1,91 @@
+body{
+    background-color: #51829B;
+    color: #1D1C1A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    background-color: white;
+    border-radius: 25px;
+    margin: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: .1fr 2fr .1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "product-image product-description"
+    "options-header options-header"
+    "options options";
+}
+
+header{
+    grid-area: header;
+    margin-left: 1em;
+}
+
+.product-image{
+    grid-area: product-image;
+    align-content: center;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 1em;
+}
+
+.product-image img{
+    object-fit: scale-down;
+    height: 550px;
+    width: 100%;
+    
+}
+
+.product-description {
+    grid-area: product-description;
+    font-size: 90%;
+    padding: 1em;
+}
+
+.product-description button{
+    color: black;
+    background-color: #FF392E;
+    border-radius: 5px;
+    justify-content: center;
+    width: 450px;
+    height: 35px;
+}
+
+.options-header{
+    grid-area: options-header;
+    margin-left: 1em;
+}
+
+.options{
+    grid-area: options;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    align-content: left;
+}
+
+.options img{
+    width: 100px;
+    padding: 1em;
+    object-fit: cover;
+}
+
+.options img:hover{
+    opacity: .3;
+    transition: 400ms;
+    border-style: inset;
+    border-radius: 25px;
+    border: 1em;
+}
+#thumbnail {
+    cursor: pointer;
+
+}
+
+#buyProduct {
+    cursor: pointer;
+
+}
+
